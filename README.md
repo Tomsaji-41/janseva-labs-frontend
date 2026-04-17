@@ -137,7 +137,7 @@ The application includes Service Worker infrastructure for offline operation, pa
 
 ## 📄 License
 
-© 2024 Janseva Labs. All rights reserved.
+© 2026 Janseva Labs. All rights reserved.
 
 ---
 
