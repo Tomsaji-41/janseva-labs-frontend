@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="100%" stop-color="#0d0202"/>
+    </radialGradient>
+    
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+    <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+    <filter id="blur3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15"/>
+    </filter>
+    
+    <linearGradient id="petal1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#800000"/>
+    </linearGradient>
+    
+    <linearGradient id="petal2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3333"/>
+      <stop offset="50%" stop-color="#e60000"/>
+      <stop offset="100%" stop-color="#990000"/>
+    </linearGradient>
+    
+    <radialGradient id="center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  
+  <!-- Large blurred poppy background -->
+  <g filter="url(#blur3)" opacity="0.6">
+    <ellipse cx="300" cy="200" rx="400" ry="350" fill="url(#petal1)"/>
+    <ellipse cx="600" cy="150" rx="350" ry="300" fill="url(#petal2)"/>
+    <ellipse cx="150" cy="400" rx="300" ry="250" fill="url(#petal1)"/>
+    <ellipse cx="400" cy="500" rx="280" ry="220" fill="url(#petal2)"/>
+    <circle cx="350" cy="300" r="80" fill="url(#center)"/>
+  </g>
+  
+  <!-- Medium blur poppy -->
+  <g filter="url(#blur2)" opacity="0.5">
+    <ellipse cx="1600" cy="800" rx="350" ry="300" fill="url(#petal2)"/>
+    <ellipse cx="1400" cy="700" rx="300" ry="250" fill="url(#petal1)"/>
+    <ellipse cx="1750" cy="600" rx="280" ry="240" fill="url(#petal2)"/>
+    <ellipse cx="1500" cy="900" rx="250" ry="200" fill="url(#petal1)"/>
+    <circle cx="1550" cy="750" r="60" fill="url(#center)"/>
+  </g>
+  
+  <!-- Light blur poppy -->
+  <g filter="url(#blur1)" opacity="0.4">
+    <ellipse cx="960" cy="540" rx="300" ry="250" fill="url(#petal1)"/>
+    <ellipse cx="1100" cy="450" rx="250" ry="200" fill="url(#petal2)"/>
+    <ellipse cx="850" cy="650" rx="220" ry="180" fill="url(#petal1)"/>
+    <ellipse cx="1050" cy="650" rx="200" ry="160" fill="url(#petal2)"/>
+    <circle cx="960" cy="540" r="50" fill="url(#center)"/>
+  </g>
+  
+  <!-- Additional decorative elements -->
+  <circle cx="200" cy="900" r="100" fill="#00A651" opacity="0.1" filter="url(#blur3)"/>
+  <circle cx="1700" cy="200" r="150" fill="#F37021" opacity="0.1" filter="url(#blur3)"/>
+  
+  <!-- Subtle gradient overlay -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" opacity="0.3"/>
+</svg>

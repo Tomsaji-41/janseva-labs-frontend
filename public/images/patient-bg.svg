@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="patientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f2d"/>
+      <stop offset="50%" stop-color="#1a3a4a"/>
+      <stop offset="100%" stop-color="#0d1f2d"/>
+    </linearGradient>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00A651" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A651" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00A651" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A651" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00A651" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00A651" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#patientGrad)"/>
+  
+  <!-- Heartbeat line abstract -->
+  <g opacity="0.2" filter="url(#softGlow)">
+    <path d="M0 540 L400 540 L450 440 L500 640 L550 340 L600 540 L800 540 L850 440 L900 640 L950 340 L1000 540 L1920 540" 
+          stroke="#00A651" stroke-width="2" fill="none"/>
+    <path d="M0 600 L300 600 L350 500 L400 700 L450 400 L500 600 L700 600 L750 500 L800 700 L850 400 L900 600 L1920 600" 
+          stroke="#00A651" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Medical cross symbols -->
+  <g opacity="0.1" filter="url(#softGlow)">
+    <!-- Cross 1 -->
+    <rect x="200" y="150" width="80" height="20" fill="#00A651"/>
+    <rect x="230" y="120" width="20" height="80" fill="#00A651"/>
+    
+    <!-- Cross 2 -->
+    <rect x="1600" y="800" width="80" height="20" fill="#00A651"/>
+    <rect x="1630" y="770" width="20" height="80" fill="#00A651"/>
+    
+    <!-- Cross 3 -->
+    <rect x="300" y="850" width="60" height="15" fill="#F37021"/>
+    <rect x="322" y="828" width="15" height="60" fill="#F37021"/>
+    
+    <!-- Cross 4 -->
+    <rect x="1500" y="150" width="60" height="15" fill="#F37021"/>
+    <rect x="1522" y="128" width="15" height="60" fill="#F37021"/>
+  </g>
+  
+  <!-- Floating medical icons abstract -->
+  <g opacity="0.08" filter="url(#softGlow)">
+    <!-- Stethoscope curve -->
+    <path d="M500 300 Q550 250 600 300 Q650 350 600 400 Q550 450 500 400 Q450 350 500 300" 
+          stroke="#00A651" stroke-width="3" fill="none"/>
+    
+    <!-- Pill shapes -->
+    <ellipse cx="1400" cy="300" rx="40" ry="20" fill="#F37021"/>
+    <rect x="1400" y="290" width="40" height="20" fill="#F37021"/>
+    
+    <ellipse cx="1450" cy="350" rx="30" ry="15" fill="#00A651"/>
+    <rect x="1450" y="342" width="30" height="15" fill="#00A651"/>
+  </g>
+  
+  <!-- DNA strand abstract -->
+  <g opacity="0.1">
+    <path d="M100 0 Q200 100 100 200 Q0 300 100 400 Q200 500 100 600 Q0 700 100 800 Q200 900 100 1000" 
+          stroke="#00A651" stroke-width="2" fill="none"/>
+    <path d="M150 0 Q250 100 150 200 Q50 300 150 400 Q250 500 150 600 Q50 700 150 800 Q250 900 150 1000" 
+          stroke="#00A651" stroke-width="2" fill="none"/>
+    
+    <!-- Connecting bars -->
+    <line x1="125" y1="50" x2="125" y2="50" stroke="#00A651" stroke-width="2"/>
+    <line x1="115" y1="150" x2="135" y2="150" stroke="#00A651" stroke-width="2"/>
+    <line x1="105" y1="250" x2="145" y2="250" stroke="#00A651" stroke-width="2"/>
+    <line x1="95" y1="350" x2="155" y2="350" stroke="#00A651" stroke-width="2"/>
+  </g>
+  
+  <!-- Soft glow centers -->
+  <circle cx="960" cy="540" r="400" fill="url(#heartGrad)" opacity="0.3"/>
+  
+  <!-- Pulse rings -->
+  <g opacity="0.1" filter="url(#softGlow)">
+    <circle cx="960" cy="540" r="200" stroke="#00A651" stroke-width="1" fill="none"/>
+    <circle cx="960" cy="540" r="300" stroke="#00A651" stroke-width="1" fill="none"/>
+    <circle cx="960" cy="540" r="400" stroke="#00A651" stroke-width="1" fill="none"/>
+  </g>
+</svg>

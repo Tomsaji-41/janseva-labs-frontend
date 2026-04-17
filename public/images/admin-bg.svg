@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="adminGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0B"/>
+      <stop offset="50%" stop-color="#111113"/>
+      <stop offset="100%" stop-color="#0A0A0B"/>
+    </linearGradient>
+    
+    <filter id="adminGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9500" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#FF9500" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FF9500" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9500" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF9500" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF9500" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#adminGrad)"/>
+  
+  <!-- Radar circles -->
+  <g opacity="0.15" filter="url(#adminGlow)">
+    <circle cx="960" cy="540" r="100" stroke="#FF9500" stroke-width="1" fill="none"/>
+    <circle cx="960" cy="540" r="200" stroke="#FF9500" stroke-width="1" fill="none"/>
+    <circle cx="960" cy="540" r="300" stroke="#FF9500" stroke-width="1" fill="none"/>
+    <circle cx="960" cy="540" r="400" stroke="#FF9500" stroke-width="1" fill="none"/>
+    
+    <!-- Radar sweep lines -->
+    <line x1="960" y1="540" x2="960" y2="140" stroke="#FF9500" stroke-width="1" opacity="0.3"/>
+    <line x1="960" y1="540" x2="1360" y2="540" stroke="#FF9500" stroke-width="1" opacity="0.3"/>
+    <line x1="960" y1="540" x2="960" y2="940" stroke="#FF9500" stroke-width="1" opacity="0.3"/>
+    <line x1="960" y1="540" x2="560" y2="540" stroke="#FF9500" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Diagonal lines -->
+    <line x1="960" y1="540" x2="1242" y2="258" stroke="#FF9500" stroke-width="1" opacity="0.2"/>
+    <line x1="960" y1="540" x2="1242" y2="822" stroke="#FF9500" stroke-width="1" opacity="0.2"/>
+    <line x1="960" y1="540" x2="678" y2="822" stroke="#FF9500" stroke-width="1" opacity="0.2"/>
+    <line x1="960" y1="540" x2="678" y2="258" stroke="#FF9500" stroke-width="1" opacity="0.2"/>
+  </g>
+  
+  <!-- Dashboard grid abstract -->
+  <g opacity="0.1">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="200" x2="1920" y2="200" stroke="#FF9500" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1920" y2="400" stroke="#FF9500" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1920" y2="600" stroke="#FF9500" stroke-width="1"/>
+    <line x1="0" y1="800" x2="1920" y2="800" stroke="#FF9500" stroke-width="1"/>
+    
+    <!-- Vertical lines -->
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#FF9500" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#FF9500" stroke-width="1"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#FF9500" stroke-width="1"/>
+  </g>
+  
+  <!-- Data points -->
+  <g opacity="0.3" filter="url(#adminGlow)">
+    <circle cx="480" cy="200" r="4" fill="#FF9500"/>
+    <circle cx="960" cy="400" r="4" fill="#FF9500"/>
+    <circle cx="1440" cy="600" r="4" fill="#FF9500"/>
+    <circle cx="720" cy="800" r="4" fill="#FF9500"/>
+    <circle cx="1200" cy="200" r="4" fill="#FF9500"/>
+    <circle cx="240" cy="600" r="4" fill="#FF9500"/>
+    <circle cx="1680" cy="400" r="4" fill="#FF9500"/>
+  </g>
+  
+  <!-- Chart bars abstract -->
+  <g opacity="0.1" filter="url(#adminGlow)">
+    <rect x="200" y="900" width="60" height="100" fill="#FF9500"/>
+    <rect x="280" y="850" width="60" height="150" fill="#FF9500"/>
+    <rect x="360" y="800" width="60" height="200" fill="#FF9500"/>
+    <rect x="440" y="880" width="60" height="120" fill="#FF9500"/>
+  </g>
+  
+  <g opacity="0.1" filter="url(#adminGlow)">
+    <rect x="1400" y="850" width="60" height="150" fill="#FF9500"/>
+    <rect x="1480" y="900" width="60" height="100" fill="#FF9500"/>
+    <rect x="1560" y="820" width="60" height="180" fill="#FF9500"/>
+    <rect x="1640" y="880" width="60" height="120" fill="#FF9500"/>
+  </g>
+  
+  <!-- Central glow -->
+  <circle cx="960" cy="540" r="500" fill="url(#radarGrad)" opacity="0.5"/>
+</svg>

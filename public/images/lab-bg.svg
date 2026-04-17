@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="labGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#0d1f35"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <linearGradient id="tubeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A651" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00ff88" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00A651" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <radialGradient id="cellGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00A651" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00A651" stop-opacity="0.1"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#labGrad)"/>
+  
+  <!-- DNA helix abstract -->
+  <g opacity="0.15" filter="url(#glow)">
+    <path d="M200 0 Q400 200 200 400 Q0 600 200 800 Q400 1000 200 1200" 
+          stroke="url(#tubeGrad)" stroke-width="3" fill="none"/>
+    <path d="M250 0 Q450 200 250 400 Q50 600 250 800 Q450 1000 250 1200" 
+          stroke="url(#tubeGrad)" stroke-width="3" fill="none"/>
+    
+    <!-- Connecting lines -->
+    <line x1="225" y1="50" x2="225" y2="50" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="210" y1="150" x2="240" y2="150" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="190" y1="250" x2="260" y2="250" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="180" y1="350" x2="270" y2="350" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="190" y1="450" x2="260" y2="450" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="210" y1="550" x2="240" y2="550" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+    <line x1="225" y1="650" x2="225" y2="650" stroke="#00A651" stroke-width="2" opacity="0.5"/>
+  </g>
+  
+  <!-- Test tubes abstract -->
+  <g opacity="0.2">
+    <rect x="1500" y="100" width="40" height="200" rx="20" fill="url(#tubeGrad)" filter="url(#glow)"/>
+    <rect x="1560" y="150" width="40" height="200" rx="20" fill="url(#tubeGrad)" filter="url(#glow)"/>
+    <rect x="1620" y="80" width="40" height="200" rx="20" fill="url(#tubeGrad)" filter="url(#glow)"/>
+    <rect x="1680" y="120" width="40" height="200" rx="20" fill="url(#tubeGrad)" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Cell structures -->
+  <g opacity="0.1">
+    <circle cx="400" cy="800" r="80" fill="url(#cellGrad)"/>
+    <circle cx="450" cy="850" r="60" fill="url(#cellGrad)"/>
+    <circle cx="350" cy="850" r="50" fill="url(#cellGrad)"/>
+    
+    <circle cx="1500" cy="800" r="100" fill="url(#cellGrad)"/>
+    <circle cx="1580" cy="750" r="70" fill="url(#cellGrad)"/>
+    <circle cx="1420" cy="780" r="60" fill="url(#cellGrad)"/>
+  </g>
+  
+  <!-- Grid pattern -->
+  <g stroke="#00A651" stroke-width="0.5" opacity="0.05">
+    <defs>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <path d="M 100 0 L 0 0 0 100" fill="none"/>
+      </pattern>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#grid)"/>
+  </g>
+  
+  <!-- Janseva brand colors accent -->
+  <circle cx="960" cy="540" r="300" fill="#00A651" opacity="0.03" filter="url(#glow)"/>
+  <circle cx="960" cy="540" r="200" fill="#F37021" opacity="0.02" filter="url(#glow)"/>
+</svg>
